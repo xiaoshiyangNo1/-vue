@@ -8,12 +8,26 @@
 </transition>
   
 
-  <mt-tabbar class="mt-tabbar">
-        <router-link class="mt-tab-item" id="tab1" to="/">tab1</router-link>
-        <router-link class="mt-tab-item" id="tab2" to="/bbb">tab2</router-link>
-        <router-link class="mt-tab-item" id="tab3" to="/ccc">tab3</router-link>
-        <router-link class="mt-tab-item" id="tab4" to="/ddd">tab4</router-link>
-</mt-tabbar>
+<nav class="mui-bar mui-bar-tab">
+			<a class="mui-tab-item mui-active" href="#tabbar">
+				<span class="mui-icon mui-icon-home"></span>
+				<span class="mui-tab-label">首页</span>
+			</a>
+			<a class="mui-tab-item" href="#tabbar-with-chat">
+				<span class="mui-icon mui-icon-contact"></span>
+				<span class="mui-tab-label">会员</span>
+			</a>
+			<a class="mui-tab-item" href="#tabbar-with-contact">
+				<span class="mui-icon mui-icon-extra mui-icon-extra-cart">
+          <span class="mui-badge">0</span>
+          </span>
+				<span class="mui-tab-label">购物车</span>
+			</a>
+			<a class="mui-tab-item" href="#tabbar-with-map">
+				<span class="mui-icon mui-icon-search"></span>
+				<span class="mui-tab-label">搜索</span>
+			</a>
+		</nav>
           <!-- <mt-tab-item id="tab1" >
             tab1
           </mt-tab-item>
@@ -49,6 +63,7 @@
   }
   .app{
     padding-top: 40px;
+    padding-bottom: 50px;
     overflow: hidden;
   }
 

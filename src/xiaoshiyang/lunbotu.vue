@@ -6,27 +6,32 @@
                     <img  :src="item.img" alt="" class="tupian">
             </mt-swipe-item>
                 
-        </mt-swipe>
+        </mt-swipe>    
 
     <div class="box">
         <router-link class="block" to="/111">
                 <img src="../images/menu1.png" alt="">
+                <div class="son">新闻资讯</div>
         </router-link>
         <router-link class="block" to="/222">
                  <img src="../images/menu2.png" alt="">
-        
+                <div class="son">图片分享</div>
         </router-link>
         <router-link class="block" to="/333">
                  <img src="../images/menu3.png" alt="">
+                 <div class="son">留言反馈</div>
         </router-link>
         <router-link class="block" to="/444">
                  <img src="../images/menu4.png" alt="">
+                 <div class="son">视频专区</div>
         </router-link>
         <router-link class="block" to="/555">
                  <img src="../images/menu5.png" alt="">
+                 <div class="son">新闻资讯</div>
         </router-link>
         <router-link class="block" to="/666">
                  <img src="../images/menu6.png" alt="">
+                 <div class="son">联系我们</div>
         </router-link>
     </div>
     </div>
@@ -46,7 +51,7 @@ export default {
     },
     methods: {
         getLunbotu() {
-            this.$http.get("http://www.lovegf.cn:8899/api/getLunbo").then(result => {
+            this.$http.get("api/getLunbo").then(result => {
                 if (result.body.status === 0) {
                     this.lunbotuList = result.body.message;
                 }else {
@@ -60,7 +65,7 @@ export default {
 </script>
 
 
-<style >
+<style  lang="less" scoped>
     .mint-swipe{
         width: 100%;
         height: 200px;
@@ -75,15 +80,27 @@ export default {
         flex-wrap: wrap;
         text-align: center;
         justify-content: space-around;
+        background:white;
     }
     img {
-        width: 60px;
-        height: 60px;
+        width: 66px;
+        height: 66px;
     }
     .box .block{
         margin-top:3%;
         /* background-color: orange; */
         width: 30%;
+        .son{
+            font-size: 13px;
+             line-height: 15px;
+     display: block;
+    width: 100%;
+    height: 15px;
+    margin-top: 8px;
+    text-overflow: ellipsis;
+    color: #333;
+
+        }
     }
     .tupian {
         width: 100%;
